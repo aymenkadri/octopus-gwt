@@ -153,41 +153,7 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- ================ Dependencies : Commons =========================== -->
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-            <version>${commons-fileupload.version}</version>
-        </dependency>
-        
-        <!-- ================ Dependencies : Tag-Lib =========================== -->
-        <dependency>
-            <groupId>jstl</groupId>
-            <artifactId>jstl</artifactId>
-            <version>${jstl.version}</version>
-        </dependency>
-        
-        <!-- ================ Dependencies : Spring-MVC =========================== -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring-webmvc.version}</version>
-        </dependency>
-        
-        <!-- ================ Dependencies : Thymeleaf =========================== -->
-        <dependency>
-            <groupId>org.thymeleaf</groupId>
-            <artifactId>thymeleaf</artifactId>
-            <version>${thymeleaf.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.thymeleaf</groupId>
-            <artifactId>thymeleaf-spring3</artifactId>
-            <version>${thymeleaf.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        
+
         <!-- ================ Dependencies : Guava =========================== -->
         <dependency>
             <groupId>com.google.guava</groupId>

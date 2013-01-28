@@ -1,8 +1,0 @@
-2013-01-21 16:01:14,667 INFO [InitializationServiceImpl] - Article instanciation
-2013-01-21 16:01:15,044 ERROR [InitializationServiceImpl] - com.googlecode.objectify.SaveException: Error saving com.sfeir.octopus.back.shared.model.Article@27bc73: No API environment is registered for this thread.
-2013-01-21 16:08:44,799 INFO [InitializationServiceImpl] - Register
-2013-01-21 16:08:44,836 INFO [InitializationServiceImpl] - Article instanciation
-2013-01-21 16:08:45,064 ERROR [InitializationServiceImpl] - com.googlecode.objectify.SaveException: Error saving com.sfeir.octopus.back.shared.model.Article@27bc73: No API environment is registered for this thread.
-2013-01-21 16:13:33,805 INFO [InitializationServiceImpl] - Register
-2013-01-21 16:13:33,809 INFO [InitializationServiceImpl] - Article instanciation
-2013-01-21 16:13:33,998 ERROR [InitializationServiceImpl] - com.googlecode.objectify.SaveException: Error saving com.sfeir.octopus.back.shared.model.Article@27bc73: No API environment is registered for this thread.

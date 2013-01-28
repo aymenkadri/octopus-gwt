@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+
+.header {
+    line-height: 85px;
+    
+    text-align: center;
+    font-size: large;
+    color: #555555;
+}
+
+.logo {
+    margin: 10px 30px;
+    
+    height: 65px;
+    width: 153px;
+}

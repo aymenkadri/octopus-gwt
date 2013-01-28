@@ -32,22 +32,7 @@ public class MenuActivity extends AbstractActivity implements MenuView.Presenter
 	private PublishPlace publishPlace;
 	
 	@Inject
-	private ArchivesPlace archivesPlace;
-	
-	@Inject
 	private ItemsPlace itemsPlace;
-	
-	@Inject
-	private ProfilesPlace profilesPlace;
-	
-	@Inject
-	private UsersPlace usersPlace;
-	
-	@Inject
-	private GroupsPlace groupsPlace;
-	
-	@Inject
-	private NewslettersPlace newslettersPlace;
 	
 	@Inject
 	private AddOnsPlace addOnsPlace;
@@ -72,33 +57,8 @@ public class MenuActivity extends AbstractActivity implements MenuView.Presenter
 	}
 
 	@Override
-	public void goToArchivesPlace() {
-		goTo(archivesPlace);
-	}
-
-	@Override
 	public void goToItemsPlace() {
 		goTo(itemsPlace);
-	}
-
-	@Override
-	public void goToProfilesPlace() {
-		goTo(profilesPlace);
-	}
-
-	@Override
-	public void goToUsersPlace() {
-		goTo(usersPlace);
-	}
-
-	@Override
-	public void goToGroupsPlace() {
-		goTo(groupsPlace);
-	}
-
-	@Override
-	public void goToNewslettersPlace() {
-		goTo(newslettersPlace);
 	}
 
 	@Override

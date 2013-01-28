@@ -26,7 +26,7 @@ public class MenuViewImpl extends Composite implements MenuView {
 	}
 	
 	@UiField
-	NavLink publishingNav, archivesNav, itemsNav, profilesNav, usersNav, groupsNav, newslettersNav, addOnNav, statisticsNav, disconnectionNav; 
+	NavLink publishingNav, itemsNav, addOnNav, statisticsNav, disconnectionNav;
 
 	private Presenter presenter;
 
@@ -43,37 +43,12 @@ public class MenuViewImpl extends Composite implements MenuView {
 	public void clickOnPublishingNav(final ClickEvent event) {
 		presenter.goToPublishPlace();
 	}
-	
-	@UiHandler("archivesNav")
-	public void clickOnArchivesNav(final ClickEvent event) {
-		presenter.goToArchivesPlace();
-	}
-	
+
 	@UiHandler("itemsNav")
 	public void clickOnItemsNavNav(final ClickEvent event) {
 		presenter.goToItemsPlace();
 	}
-	
-	@UiHandler("profilesNav")
-	public void clickOnProfilesNav(final ClickEvent event) {
-		presenter.goToProfilesPlace();
-	}
-	
-	@UiHandler("usersNav")
-	public void clickOnUsersNav(final ClickEvent event) {
-		presenter.goToUsersPlace();
-	}
-	
-	@UiHandler("groupsNav")
-	public void clickOnGroupsNav(final ClickEvent event) {
-		presenter.goToGroupsPlace();
-	}
-	
-	@UiHandler("newslettersNav")
-	public void clickOnNewslettersNav(final ClickEvent event) {
-		presenter.goToNewslettersPlace();
-	}
-	
+
 	@UiHandler("addOnNav")
 	public void clickOnAddOnNav(final ClickEvent event) {
 		presenter.goToAddOnsPlace();

@@ -1,9 +1,19 @@
-MVP-Gin
-======
+Octopus
+=======
 
-Projet GWT sous Maven implémentant MVP en utilisant Gin.
+Technologie : GAE, GWT, Git, Maven.
 
-L'IHM est composée de 2 sections :
-  * un menu fixe
-  * une zone de contenu
+
+L'IHM est développé en GWT :
+  * Ui Binder pour les Vue
+  * Gwt-bootstrap pour le design
+  * Activity / Place et Gin
+  * Google Auth pour l'authentification
+
+
+Le Backend utilise :
+  * Objectify pour la persistence
+
+
+ demo : beoctopus.appspot.com
 

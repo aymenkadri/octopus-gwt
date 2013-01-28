@@ -24,6 +24,7 @@
 	<set-property name="bootstrap.responsiveDesign" value="true"/>
 
 
-	<!-- Pour le dev -->
-	<set-property name="user.agent" value="gecko1_8" />
+	<!-- Pour le dev
+	<set-property name="user.agent" value="gecko1_8" />-->
+    <set-property name="user.agent" value="safari" />
 </module>

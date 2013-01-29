@@ -8,15 +8,6 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
-import com.sfeir.octopus.back.client.place.AddOnsPlace;
-import com.sfeir.octopus.back.client.place.ArchivesPlace;
-import com.sfeir.octopus.back.client.place.GroupsPlace;
-import com.sfeir.octopus.back.client.place.ItemsPlace;
-import com.sfeir.octopus.back.client.place.NewslettersPlace;
-import com.sfeir.octopus.back.client.place.ProfilesPlace;
-import com.sfeir.octopus.back.client.place.PublishPlace;
-import com.sfeir.octopus.back.client.place.StatisticsPlace;
-import com.sfeir.octopus.back.client.place.UsersPlace;
 
 public class MenuViewImpl extends Composite implements MenuView {
 
@@ -26,7 +17,7 @@ public class MenuViewImpl extends Composite implements MenuView {
 	}
 	
 	@UiField
-	NavLink publishingNav, itemsNav, addOnNav, statisticsNav, disconnectionNav;
+	NavLink itemsNav, addOnNav, statisticsNav, disconnectionNav, mapNav;
 
 	private Presenter presenter;
 
@@ -37,11 +28,6 @@ public class MenuViewImpl extends Composite implements MenuView {
 	@Override
 	public void setPresenter(final Presenter listener) {
 		presenter = listener;
-	}
-	
-	@UiHandler("publishingNav")
-	public void clickOnPublishingNav(final ClickEvent event) {
-		presenter.goToPublishPlace();
 	}
 
 	@UiHandler("itemsNav")
@@ -58,6 +44,11 @@ public class MenuViewImpl extends Composite implements MenuView {
 	public void clickOnStatisticsNav(final ClickEvent event) {
 		presenter.goToStatisticsPlace();
 	}
+
+    @UiHandler("mapNav")
+    public void clickOnMapNav(final ClickEvent event) {
+        presenter.goToMapPlace();
+    }
 	
 	@UiHandler("disconnectionNav")
 	public void clickOnDisconnectionNav(final ClickEvent event) {

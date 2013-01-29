@@ -1,52 +1,43 @@
-package com.sfeir.macabe2012.client.maps;
+package com.sfeir.octopus.back.client.activity;
+
+
 
 import com.google.gwt.activity.shared.AbstractActivity;
-import com.google.gwt.core.client.GWT;
+import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.event.shared.EventBus;
-import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.place.shared.Place;
+import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
-import com.google.gwt.user.client.ui.IsWidget;
-import com.sfeir.macabe2012.client.maps.rpc.RadarService;
-import com.sfeir.macabe2012.client.maps.rpc.RadarServiceAsync;
-import com.sfeir.macabe2012.shared.entity.Radar;
+import com.google.inject.Inject;
+import com.sfeir.octopus.back.client.mvp.HasPlace;
+import com.sfeir.octopus.back.client.place.MapPlace;
+import com.sfeir.octopus.back.client.ui.maps.MapsView;
 
-import java.util.ArrayList;
-import java.util.List;
+public class MapActivity extends AbstractActivity implements HasPlace, MapsView.Presenter {
 
-public class MapActivity extends AbstractActivity {
+    @Inject
+    private MapsView view;
 
-    public interface MapView extends IsWidget {
+    @Inject
+    private PlaceController placeController;
 
-        public void setRadars(List<Radar> result);
-        public void refresh();
+    private MapPlace place;
+
+    @Override
+    public void start(final AcceptsOneWidget panel, final EventBus eventBus) {
+        view.setPresenter(this);
+        panel.setWidget(view.asWidget());
     }
 
-    private MapView view = new MapViewImpl();
-    private final RadarServiceAsync radarService = GWT
-            .create(RadarService.class);
-
-    public MapActivity() {
-
+    @Override
+    public void goTo(final Place place) {
+        placeController.goTo(place);
     }
 
-
-    public void start(AcceptsOneWidget display, EventBus eventBus) {
-
-        radarService.getAllRadars(new AsyncCallback<ArrayList<Radar>>() {
-
-            @Override
-            public void onFailure(Throwable caught) {
-                GWT.log("Erreur de récupération RPC des radars");
-            }
-
-            @Override
-            public void onSuccess(ArrayList<Radar> result) {
-                view.setRadars(result);
-                view.refresh();
-            }
-        });
-
-        display.setWidget(view);
+    @Override
+    public Activity setPlace(final Place place) {
+        this.place = (MapPlace) place;
+        return this;
     }
 
 }

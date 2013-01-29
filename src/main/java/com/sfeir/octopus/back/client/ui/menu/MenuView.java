@@ -10,10 +10,10 @@ public interface MenuView extends IsWidget {
 	public interface Presenter {
 
 		void goTo(Place place);
-		void goToPublishPlace();
 		void goToItemsPlace();
 		void goToAddOnsPlace();
 		void goToStatisticsPlace();
+        void goToMapPlace();
 		void disconnect();
 	}
 }

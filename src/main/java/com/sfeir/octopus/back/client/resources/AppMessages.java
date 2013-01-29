@@ -18,6 +18,7 @@ public interface AppMessages extends Messages {
 	String menuAddOns();
 	String menuStatistics();
 	String menuDisconnection();
+    String menuMap();
 	
 	String menuFrontOffice();
 }

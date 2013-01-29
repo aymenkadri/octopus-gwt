@@ -16,13 +16,14 @@
                 <g:Image ui:field="logoBtn" resource="{img.logoOctopus}" altText="Octopus" styleName="{style.logo}" />
             </b:Column>
             <b:Column size="10">
-                <g:Label ui:field="titleLbl"  text="{msg.titleHeader}" styleName="{style.header}" />
+                <g:Label ui:field="titleLbl"  text="{msg.titleHeader}"
+                         horizontalAlignment='ALIGN_RIGHT' styleName="{style.header}" />
             </b:Column>
         </b:FluidRow>
         <b:ResponsiveNavbar>
             <b:Nav>
+                <b:NavLink ui:field="mapNav" text="{msg.menuMap}" icon="MAP_MARKER" />
                 <b:NavLink ui:field="itemsNav" text="{msg.menuItems}" icon="FOLDER_OPEN" />
-                <b:NavLink ui:field="publishingNav" text="{msg.menuPublishing}" icon="SHARE" />
                 <!--<b:NavLink ui:field="archivesNav" text="{msg.menuArchives}" icon="FOLDER_OPEN" />
                 <b:NavLink ui:field="profilesNav" text="{msg.menuProfiles}" icon="GROUP" />
                 <b:NavLink ui:field="usersNav" text="{msg.menuUsers}" icon="USER" />
@@ -30,10 +31,10 @@
                 <b:NavLink ui:field="newslettersNav" text="{msg.menuNewsletters}" icon="ENVELOPE_ALT" />-->
                 <b:NavLink ui:field="addOnNav" text="{msg.menuAddOns}" icon="COGS" />
                 <b:NavLink ui:field="statisticsNav" text="{msg.menuStatistics}" icon="BAR_CHART" />
-                <b:NavLink ui:field="disconnectionNav" text="{msg.menuDisconnection}" icon="SIGNOUT" />
             </b:Nav>
             <b:Nav alignment="RIGHT">
-                <b:NavLink ui:field="frontOffice" text="{msg.menuFrontOffice}" icon="HOME" />
+                <b:NavLink ui:field="disconnectionNav" text="{msg.menuDisconnection}" icon="SIGNOUT" />
+                <!--<b:NavLink ui:field="frontOffice" text="{msg.menuFrontOffice}" icon="HOME" /> -->
             </b:Nav>
         </b:ResponsiveNavbar>
 	</g:HTMLPanel>

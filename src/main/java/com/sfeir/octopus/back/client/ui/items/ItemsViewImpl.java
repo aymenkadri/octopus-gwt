@@ -9,7 +9,7 @@ public class ItemsViewImpl extends Composite implements ItemsView {
 
 	private static ViewImplUiBinder uiBinder = GWT.create(ViewImplUiBinder.class);
 
-	interface ViewImplUiBinder extends UiBinder<Widget, ItemsViewImpl> {
+	interface ViewImplUiBinder extends UiBinder<Widget, com.sfeir.octopus.back.client.ui.items.ItemsViewImpl> {
 	}
 
 	private Presenter presenter;

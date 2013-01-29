@@ -8,6 +8,11 @@
     color: #555555;
 }
 
+.right_align {
+        float: right;
+        margin-left: 15px;
+        }
+
 .logo {
     margin: 10px 30px;
     

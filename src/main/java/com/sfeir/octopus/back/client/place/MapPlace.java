@@ -1,4 +1,4 @@
-package com.sfeir.macabe2012.client.maps;
+package com.sfeir.octopus.back.client.place;
 
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;

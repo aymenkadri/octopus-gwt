@@ -9,15 +9,7 @@ import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
-import com.sfeir.octopus.back.client.place.AddOnsPlace;
-import com.sfeir.octopus.back.client.place.ArchivesPlace;
-import com.sfeir.octopus.back.client.place.GroupsPlace;
-import com.sfeir.octopus.back.client.place.ItemsPlace;
-import com.sfeir.octopus.back.client.place.NewslettersPlace;
-import com.sfeir.octopus.back.client.place.ProfilesPlace;
-import com.sfeir.octopus.back.client.place.PublishPlace;
-import com.sfeir.octopus.back.client.place.StatisticsPlace;
-import com.sfeir.octopus.back.client.place.UsersPlace;
+import com.sfeir.octopus.back.client.place.*;
 import com.sfeir.octopus.back.client.ui.menu.MenuView;
 
 public class MenuActivity extends AbstractActivity implements MenuView.Presenter {
@@ -29,9 +21,6 @@ public class MenuActivity extends AbstractActivity implements MenuView.Presenter
 	private MenuView view;
 	
 	@Inject
-	private PublishPlace publishPlace;
-	
-	@Inject
 	private ItemsPlace itemsPlace;
 	
 	@Inject
@@ -39,6 +28,9 @@ public class MenuActivity extends AbstractActivity implements MenuView.Presenter
 	
 	@Inject
 	private StatisticsPlace statisticsPlace;
+
+    @Inject
+    private MapPlace mapPlace;
 
 	@Override
 	public void start(final AcceptsOneWidget panel, final EventBus eventBus) {
@@ -49,11 +41,6 @@ public class MenuActivity extends AbstractActivity implements MenuView.Presenter
 	@Override
 	public void goTo(final Place place) {
 		placeController.goTo(place);
-	}
-
-	@Override
-	public void goToPublishPlace() {
-		goTo(publishPlace);
 	}
 
 	@Override
@@ -70,6 +57,11 @@ public class MenuActivity extends AbstractActivity implements MenuView.Presenter
 	public void goToStatisticsPlace() {
 		goTo(statisticsPlace);
 	}
+
+    @Override
+    public void goToMapPlace() {
+        goTo(mapPlace);
+    }
 
 	@Override
 	public void disconnect() {

@@ -1,0 +1,12 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:gm='urn:import:com.google.gwt.maps.client'>
+    <ui:style>
+        .mapStyle {}
+    </ui:style>
+    <g:SimplePanel ui:field='simplePanelWidget' styleName="{style.mapStyle}" >
+        <!--<g:center>
+            <gm:MapWidget ui:field='map'  />
+        </g:center>-->
+    </g:SimplePanel>
+</ui:UiBinder

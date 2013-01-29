@@ -101,6 +101,14 @@
             <artifactId>gwt-bootstrap</artifactId>
             <version>${gwt-bootstrap.version}</version>
         </dependency>
+
+        <!-- ================ Dependencies : GWT-MAP?? =========================== -->
+        <dependency>
+            <groupId>com.github.rwl</groupId>
+            <artifactId>gwt-maps</artifactId>
+            <version>3.8.0-pre1</version>
+            <scope>compile</scope>
+        </dependency>
         
         <!-- ================ Dependency : Objectify =========================== -->
         <dependency>

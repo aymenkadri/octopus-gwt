@@ -21,7 +21,7 @@ public class MenuActivity extends AbstractActivity implements MenuView.Presenter
 	private MenuView view;
 	
 	@Inject
-	private ItemsPlace itemsPlace;
+	private IncomePlace itemsPlace;
 	
 	@Inject
 	private AddOnsPlace addOnsPlace;

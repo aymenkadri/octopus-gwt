@@ -18,7 +18,7 @@ public class AppActivityMapper implements ActivityMapper {
 	Provider<AddOnsActivity> addOnsActivityProvider;
 
 	@Inject
-	Provider<ItemsActivity> itemsActivityProvider;
+	Provider<IncomeActivity> incomeActivityProvider;
 
 	@Inject
 	Provider<MapActivity> mapActivityProvider;
@@ -40,8 +40,8 @@ public class AppActivityMapper implements ActivityMapper {
 		if (place instanceof AddOnsPlace) {
 			return addOnsActivityProvider.get().setPlace(place);
 		}
-		if (place instanceof ItemsPlace) {
-			return itemsActivityProvider.get().setPlace(place);
+		if (place instanceof IncomePlace) {
+			return incomeActivityProvider.get().setPlace(place);
 		}
 		if (place instanceof StatisticsPlace) {
 			return statisticsActivityProvider.get().setPlace(place);

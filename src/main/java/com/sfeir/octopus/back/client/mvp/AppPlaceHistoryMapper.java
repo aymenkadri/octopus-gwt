@@ -8,7 +8,7 @@ import com.sfeir.octopus.back.client.place.*;
 @WithTokenizers({ //
 	HomePlace.Tokenizer.class, //
 	AddOnsPlace.Tokenizer.class, //
-	ItemsPlace.Tokenizer.class, //
+    IncomePlace.Tokenizer.class, //
 	MapPlace.Tokenizer.class, //
 	StatisticsPlace.Tokenizer.class, //
 	UsersPlace.Tokenizer.class //

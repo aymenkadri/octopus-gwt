@@ -13,6 +13,7 @@ public class ObjectifyGenericDAO<E extends HasId> implements GenericDAO<E> {
 
 	@Override
 	public void addOrUpdate(E entity) {
+
 		INSTANCE.save().entity(entity).now();
 	}
 

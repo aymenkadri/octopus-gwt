@@ -8,10 +8,8 @@
 	<g:HTMLPanel>
         <b:WellForm>
             <b:ControlLabel>Label name</b:ControlLabel>
-            <b:TextBox placeholder="Type something…"/>
-            <b:HelpBlock>Example block-level help text here.</b:HelpBlock>
-            <b:CheckBox> Check me out</b:CheckBox>
-            <b:SubmitButton addStyleNames="btn">Submit</b:SubmitButton>
+            <b:TextBox placeholder="Type something…" ui:field="nameBox"/>
+            <b:Button addStyleNames="btn" ui:field="saveButton">Submit</b:Button>
         </b:WellForm>
 	</g:HTMLPanel>
 </ui:UiBinder> 

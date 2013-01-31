@@ -24,6 +24,15 @@
     <url-pattern>/Octopus/initializationService</url-pattern>
   </servlet-mapping>
 
+    <servlet>
+        <servlet-name>IncomeService</servlet-name>
+        <servlet-class>com.sfeir.octopus.back.server.rpc.IncomeServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IncomeService</servlet-name>
+        <url-pattern>/Octopus/incomeService</url-pattern>
+    </servlet-mapping>
+
     
   <!-- Default page to serve -->
   <welcome-file-list>

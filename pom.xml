@@ -20,16 +20,12 @@
         <gin.version>2.0.0</gin.version>
         <gae.version>1.7.3</gae.version>
         <gwt-bootstrap.version>2.0.4.0</gwt-bootstrap.version>
-        <gwt-widget.version>1.1</gwt-widget.version>
         <objectify.version>4.0b1</objectify.version>
         <junit.version>4.11</junit.version>
         <mockito.version>1.9.0</mockito.version>
         <fest.version>1.4</fest.version>
         <slf4j.version>1.6.1</slf4j.version>
-        <commons-fileupload.version>1.2</commons-fileupload.version>
-        <jstl.version>1.2</jstl.version>
-        <spring-webmvc.version>3.1.1.RELEASE</spring-webmvc.version>
-        <thymeleaf.version>2.0.14</thymeleaf.version>
+
         <guava.version>13.0.1</guava.version>
         <guice.version>3.0</guice.version>
 
@@ -109,13 +105,6 @@
             <groupId>com.google.inject.extensions</groupId>
             <artifactId>guice-persist</artifactId>
             <version>${guice.version}</version>
-        </dependency>
-
-        <!-- ================ Dependency : GWT-Widget =========================== -->
-        <dependency>
-            <groupId>net.sf.gwt-widget</groupId>
-            <artifactId>gwt-sl</artifactId>
-            <version>${gwt-widget.version}</version>
         </dependency>
 
         <!-- ================ Dependencies : GWT-Bootstrap =========================== -->

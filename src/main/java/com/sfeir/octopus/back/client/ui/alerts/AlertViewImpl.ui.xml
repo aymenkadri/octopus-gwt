@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+    <ui:style>
+        .articles_table {
+        margin: 20px 0 0 0;
+        }
+
+        .go_to_front_link {
+        display: inline;
+        float: right;
+        padding-right: 20px;
+        font-size: 14px;
+        }
+
+        .msg_modal {
+        left: 50% !important;
+        top: 75% !important;
+        }
+    </ui:style>
+    <b:Modal ui:field="modalMessages" addStyleNames="{style.msg_modal}"
+             title="VeGA Information" backdrop="STATIC"
+             hideOthers="true" keyboard="true" animation="true">
+        <b:Paragraph ui:field="modalMsgParagraph"></b:Paragraph>
+        <b:ModalFooter>
+            <b:Button ui:field="modalOkBtn" icon="OK"/>
+            <b:Button ui:field="modalCancelBtn" icon="REMOVE"/>
+        </b:ModalFooter>
+    </b:Modal>
+
+</ui:UiBinder> 

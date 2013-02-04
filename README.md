@@ -13,6 +13,7 @@ L'IHM est développé en GWT :
 
 Le Backend utilise :
   * Objectify pour la persistence
+  * Guice pour l'injection des dépendances coté serveur
 
 
  demo : beoctopus.appspot.com

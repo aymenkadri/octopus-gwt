@@ -3,6 +3,7 @@ package com.sfeir.octopus.back.server.guice;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Singleton;
+import com.sfeir.octopus.back.server.dao.impl.ObjectifyIncomeDAO;
 import com.sfeir.octopus.back.server.rpc.IncomeServiceImpl;
 import com.sfeir.octopus.back.server.rpc.InitializationServiceImpl;
 
@@ -15,6 +16,8 @@ public class ServletsModule extends AbstractModule {
   protected void configure() {
     bind(InitializationServiceImpl.class).in(Singleton.class);
     bind(IncomeServiceImpl.class).in(Singleton.class);
+
+    //bind(IncomeServiceImpl.class).to(ObjectifyIncomeDAO.class);
   }
   
 }

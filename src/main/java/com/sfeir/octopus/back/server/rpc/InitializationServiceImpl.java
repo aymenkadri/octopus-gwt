@@ -8,13 +8,19 @@ import com.sfeir.octopus.back.client.rpc.InitializationService;
 import com.sfeir.octopus.back.server.dao.impl.ObjectifyArticleDAO;
 import com.sfeir.octopus.back.shared.model.Article;
 
+import javax.inject.Inject;
+
 @SuppressWarnings("serial")
 public class InitializationServiceImpl  extends RemoteServiceServlet implements InitializationService {
-	
-	private final static Logger LOGGER = Logger.getLogger(InitializationServiceImpl.class.getSimpleName());
-	
-	private ObjectifyArticleDAO articleDAO = new ObjectifyArticleDAO();
-	
+
+    private final static Logger LOGGER = Logger.getLogger(InitializationServiceImpl.class.getSimpleName());
+
+    private ObjectifyArticleDAO articleDAO = new ObjectifyArticleDAO();
+
+    @Inject
+    public InitializationServiceImpl() {
+    }
+
 	@Override
 	public void initParagraphes() {
 	}

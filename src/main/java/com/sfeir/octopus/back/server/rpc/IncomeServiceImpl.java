@@ -9,10 +9,17 @@ import com.sfeir.octopus.back.shared.model.Article;
 import com.sfeir.octopus.back.shared.model.Income;
 import org.apache.log4j.Logger;
 
+import javax.inject.Inject;
 import java.util.List;
 
 @SuppressWarnings("serial")
 public class IncomeServiceImpl extends RemoteServiceServlet implements IncomeService {
+
+
+    @Inject
+    public IncomeServiceImpl() {
+    }
+
     @Override
     public void addOrUpdate(Income income) {
         LOGGER.info("IncomeServiceImpl.addOrUpdate");

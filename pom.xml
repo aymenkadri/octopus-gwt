@@ -32,6 +32,7 @@
         <thymeleaf.version>2.0.14</thymeleaf.version>
         <guava.version>13.0.1</guava.version>
         <guice.version>3.0</guice.version>
+        <gmaps.version>3.8.0-pre1</gmaps.version>
 
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -195,6 +196,14 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava-gwt</artifactId>
             <version>${guava.version}</version>
+        </dependency>
+
+        <!-- ================ Dependencies : Gwt-maps ======================= -->
+        <dependency>
+            <groupId>com.github.rwl</groupId>
+            <artifactId>gwt-maps</artifactId>
+            <version>${gmaps.version}</version>
+            <scope>compile</scope>
         </dependency>
 
     </dependencies>

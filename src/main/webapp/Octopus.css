@@ -63,3 +63,6 @@ border-radius: 6px 6px 0 0;
 color: #555;
 font-family: Arial Unicode MS, Arial, sans-serif;
 }
+img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
+    max-width: 99999px;
+}

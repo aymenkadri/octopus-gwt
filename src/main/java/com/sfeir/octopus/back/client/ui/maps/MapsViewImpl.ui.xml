@@ -1,9 +1,13 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
-<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
-    <ui:style>
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
-    </ui:style>
-    <g:HTMLPanel>
-        Maps
-    </g:HTMLPanel>
+    <ui:style src="Maps.css" />
+    <g:SimplePanel ui:field='simplePanelWidget'  >
+    <!--<g:center>
+        <gm:MapWidget ui:field='map'  />
+    </g:center>-->
+</g:SimplePanel>
+
+
 </ui:UiBinder>

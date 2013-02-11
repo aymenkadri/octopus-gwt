@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+/* Fix the displaying of maps infowindows (due to conflict between bootstrap and maps APIs) */
+img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
+    max-width: 99999px;
+}

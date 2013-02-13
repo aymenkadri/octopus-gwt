@@ -1,12 +1,19 @@
 package com.sfeir.octopus.back.client.ui.maps;
 
+import com.google.gwt.ajaxloader.client.ClientLocation;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.maps.gwt.client.*;
+import com.google.maps.gwt.client.places.PlaceDetailsRequest;
+import com.google.maps.gwt.client.places.PlacesService;
+import com.sfeir.octopus.back.client.ClientLocalizer;
+import com.sfeir.octopus.back.client.Position;
 
 public class MapsViewImpl extends Composite implements MapsView {
 
@@ -16,16 +23,40 @@ public class MapsViewImpl extends Composite implements MapsView {
     }
 
     private Presenter presenter;
+
     GoogleMap theMap = (GoogleMap) GoogleMap.create();
 
     @UiField(provided=true)
     SimplePanel simplePanelWidget ;
 
+    private static LatLng latLng = LatLng.create(0,0) ;
+
+    private native void getGeoLocation() /*-{
+
+     if(null == $wnd.navigator.geolocation) {
+       return;
+     }
+
+    $wnd.navigator.geolocation.getCurrentPosition(
+     @com.sfeir.octopus.back.client.ui.maps.MapsViewImpl::geoLocationCallback(Lcom/sfeir/octopus/back/client/Position;),
+     @com.sfeir.octopus.back.client.ui.maps.MapsViewImpl::geoLocationCallbackError(Lcom/google/gwt/core/client/JavaScriptObject;),
+     {enableHighAccuracy:true, maximumAge:60000});
+    }-*/;
+    public static void geoLocationCallback(Position position) {
+        latLng = LatLng.create(position.getLatitude(),
+                position.getLongitude());
+        //MapsViewImpl.position = position;
+    }
+    public static void geoLocationCallbackError(JavaScriptObject jso) {
+    }
 
     public MapsViewImpl() {
         MapOptions options  = MapOptions.create() ;
+        getGeoLocation();
 
-        options.setCenter(LatLng.create(48.8863702, 2.2571804));
+        /*Window.alert("getLatitude: "+latLng.lat());*/
+
+        options.setCenter(latLng);
         options.setZoom( 6 ) ;
         options.setMapTypeId(MapTypeId.ROADMAP );
         options.setDraggable(true);
